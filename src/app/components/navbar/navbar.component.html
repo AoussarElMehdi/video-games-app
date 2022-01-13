@@ -1,0 +1,18 @@
+<nav class="nav">
+  <span class="nav-logo" routerLink="/">VideoGamesApp</span>
+  <div class="nav-search">
+    <mat-icon
+    aria-hidden="false"
+    aria-label="header search icon"
+    class="nav-search-icon"
+    >
+    search
+  </mat-icon>
+    <input
+    type="text"
+    class="nav-search-input"
+    placeholder="Search 500.000+ games"
+    (keypress)="search($event)"
+    />
+  </div>
+</nav>

@@ -1,0 +1,30 @@
+<div class="home">
+  <div class="home-filter">
+    <a href="#" class="filter-item" *ngFor="let item of sortList">{{item}}</a>
+  </div>
+  <div class="games">
+      <div class="game" *ngFor="let game of games">
+          <div class="game-thumb-container">
+            <img
+             *ngIf="game.background_image"
+              src="{{game.background_image}}"
+              alt="thumbnail"
+              class="game-thumbnail"
+            />
+            <p *ngIf="!game.background_image">No image</p>
+          </div>
+          <div class="game-desc">
+            <div class="game-platforms">
+              <p class="game-name">name</p>
+              <div class="game-platform">
+                <img
+                  class="game-platform"
+                  src=""
+                  alt="slug"
+                />
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
