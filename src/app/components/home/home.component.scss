@@ -1,9 +1,9 @@
-.home{
+.home {
   height: 100%;
   padding: 10px;
   background-color: #f3f2ef;
 
-  &-filter{
+  &-filter {
     width: 100%;
     margin-top: 10px;
     display: flex;
@@ -11,28 +11,27 @@
     justify-content: center;
     align-items: center;
 
-    .filter-item{
+    .filter-item {
       text-decoration: none;
       margin: 0 8px;
       padding: 6px;
       border-radius: 8px;
       color: #333;
 
-      &:hover{
+      &:hover {
         font-weight: bold;
-        background-color: #ecebe6;
       }
     }
   }
 }
 
-.games{
+.games {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 20px auto;
 }
-.game{
+.game {
   width: 280px;
   height: 360px;
   margin: 10px;
@@ -40,14 +39,14 @@
   border-radius: 5px;
   background-color: #202020;
   box-shadow: 4px 3px 8px 0px rgb(65, 54, 28);
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     box-shadow: 4px 3px 11px 6px rgb(65, 54, 28);
   }
 
-  &-thumb-container{
+  &-thumb-container {
     background-color: #000000;
     position: relative;
     height: 172px;
@@ -55,7 +54,7 @@
     text-align: center;
   }
 
-  &-thumbnail{
+  &-thumbnail {
     position: absolute;
     top: 0;
     left: 0;
@@ -64,7 +63,7 @@
     height: 172px;
   }
 
-  &-desc{
+  &-desc {
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -72,9 +71,9 @@
     height: 157px;
   }
 
-  &-name{
+  &-name {
     color: #fff;
-    font-weight:700;
+    font-weight: 700;
     font-size: 22px;
     margin-bottom: 20px;
     white-space: nowrap;
@@ -82,13 +81,19 @@
     overflow: hidden;
   }
 
-  &-platforms{
+  &-platforms {
     display: flex;
-    flex-direction: column;
+    padding-bottom: 10px;
+    align-items: center;
   }
 
-  &-platform{
+  &-platform {
     width: 20px;
-    margin-right: 20px;
+    margin-right: 16px;
   }
+}
+
+.active {
+  font-weight: bold;
+  background-color: #ecebe6;
 }
