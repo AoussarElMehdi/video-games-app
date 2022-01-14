@@ -23,7 +23,7 @@
     }
 
     .value-text {
-      fill: #333;
+      fill: #fff;
       font-weight: 700;
       font-size: 24px;
     }
@@ -36,7 +36,7 @@
 
     &-label {
       font-size: 20px;
-      color: #333;
+      color: #fff;
       position: relative;
       bottom: 60px;
     }
@@ -63,19 +63,19 @@
   &-header {
     &-title {
       font-size: 70px;
-      color: #333;
+      color: #fff;
       font-weight: 700;
       line-height: 70px;
       white-space: nowrap;
     }
 
     &-release-date {
-      color: #333;
+      color: #fff;
       font-weight: 700;
     }
 
     &-genres {
-      color: #333;
+      color: #fff;
       font-weight: 700;
     }
   }
