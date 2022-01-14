@@ -5,7 +5,7 @@ import { AppRoutingRoutes } from './app-routing.routing';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpErrorsInterceptor } from './interceptors/http-errors.interceptor';
 import { HttpHeadersInterceptor } from './interceptors/http-headers.interceptor';
-
+import { GaugeModule } from 'angular-gauge';
 // Component
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,7 +26,8 @@ import { DetailsComponent } from './components/details/details.component';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingRoutes,
-    MatIconModule
+    MatIconModule,
+    GaugeModule.forRoot()
   ],
   providers: [
     {

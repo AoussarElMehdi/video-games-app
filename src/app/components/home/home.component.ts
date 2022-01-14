@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
   }
 
   openGameDetails(gameId: number): void{
-    this.router.navigate(['details' + gameId])
+    this.router.navigate(['details', gameId])
   }
 
   ngOnDestroy(): void {
