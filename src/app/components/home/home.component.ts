@@ -32,7 +32,6 @@ export class HomeComponent implements OnInit {
     this.gameServiceSubscription = this.httpService.getGames(sort, search).subscribe(
       (games: APIResponse<Game>) => {
         this.games = games.results;
-        console.log(this.games)
       }
     )
   }
@@ -43,18 +42,16 @@ export class HomeComponent implements OnInit {
     this.httpService.getGames(sort).subscribe(
       (games: APIResponse<Game>) => {
         this.games = games.results;
-        console.log(this.games)
       }
     )
   }
 
-  openGameDetails(gameId: number): void{
+  openGameDetails(gameId: string): void{
     this.router.navigate(['details', gameId])
   }
 
   ngOnDestroy(): void {
-    this.gameServiceSubscription && this.gameServiceSubscription.unsubscribe()
-    this.routeSubscription && this.routeSubscription.unsubscribe()
-
+    if(this.gameServiceSubscription)this.gameServiceSubscription.unsubscribe()
+    if(this.routeSubscription) this.routeSubscription.unsubscribe()
   }
 }

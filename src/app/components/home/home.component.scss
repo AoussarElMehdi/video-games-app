@@ -2,10 +2,11 @@
   height: 100%;
   padding: 10px;
   background-color: #f3f2ef;
+  padding-top: 64px;
 
   &-filter {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -89,7 +90,7 @@
 
   &-platform {
     width: 20px;
-    margin-right: 16px;
+    margin-right: 10px;
   }
 }
 

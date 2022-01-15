@@ -11,10 +11,10 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class DetailsComponent implements OnInit {
   gameRating = 0;
-  gameId!: number;
-  game!: Game;
-  routeSubscription!: Subscription;
-  gameServiceSubscription!: Subscription;
+  gameId: string;
+  game: Game;
+  routeSubscription: Subscription;
+  gameServiceSubscription: Subscription;
 
   constructor(
     private httpService: HttpService,
@@ -22,14 +22,14 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.routeSubscription = this.activatedRoute.params.subscribe((params: Params) => {
-      this.gameId = params['id'];
+      this.gameId = params['gameId'];
       this.getGameDetails(this.gameId);
 ;    })
   }
-  getGameDetails(gameId: number) {
+
+  getGameDetails(gameId: string) {
     this.gameServiceSubscription = this.httpService.getGameDetails(gameId).subscribe((response: Game) => {
       this.game = response;
-
       setTimeout(() => {
         this.gameRating = this.game.metacritic;
       }, 1000);
@@ -46,6 +46,11 @@ export class DetailsComponent implements OnInit {
     } else {
       return '#ef4655';
     }
+  }
+
+  ngOnDestroy(): void {
+    if(this.gameServiceSubscription)this.gameServiceSubscription.unsubscribe()
+    if(this.routeSubscription) this.routeSubscription.unsubscribe()
   }
 
 }

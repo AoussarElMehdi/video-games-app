@@ -11,15 +11,18 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import {MatIconModule} from '@angular/material/icon';
+import {MatTabsModule} from '@angular/material/tabs';
 import { HomeComponent } from './components/home/home.component';
 import { DetailsComponent } from './components/details/details.component';
+import { GameTabsComponent } from './components/game-tabs/game-tabs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    DetailsComponent
+    DetailsComponent,
+    GameTabsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { DetailsComponent } from './components/details/details.component';
     HttpClientModule,
     AppRoutingRoutes,
     MatIconModule,
-    GaugeModule.forRoot()
+    GaugeModule.forRoot(),
+    MatTabsModule
   ],
   providers: [
     {
